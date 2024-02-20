@@ -42,7 +42,7 @@ const Header = () => {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static" sx={{ backgroundColor: '#5E6378' }}>
                 <Toolbar>
-                    {/* Utilisation de RouterLink au lieu de <a> pour @axelfrache */}
+                    {}
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link component={RouterLink} to="/" style={{ textDecoration: 'none', color: 'white' }}>
                             @axelfrache
