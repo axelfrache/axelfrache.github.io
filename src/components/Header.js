@@ -1,37 +1,26 @@
-import * as React from 'react';
-import { useState } from 'react';
-import {
-    AppBar,
-    Box,
-    Toolbar,
-    Typography,
-    IconButton,
-    Drawer,
-    List,
-    ListItem,
-    ListItemText,
-    Link,
-    Button
-} from '@mui/material';
+import React, { useState } from 'react';
+import { AppBar, Box, Toolbar, Typography, IconButton, Drawer, List, ListItem, ListItemText, Link, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as RouterLink } from 'react-router-dom';
+
+const navLinks = [
+    { title: 'Home', path: '/' },
+    { title: 'Portfolio', path: '/portfolio' },
+    { title: 'Projects', path: '/projects' },
+    { title: 'Contact', path: '/contact' },
+];
 
 const Header = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
-    const handleDrawerToggle = () => {
-        setDrawerOpen(!drawerOpen);
-    };
+    const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
-    const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ width: 250 }}>
+    const drawerContent = (
+        <Box onClick={toggleDrawer} sx={{ width: 250 }}>
             <List>
-                <ListItem button key="Home" component={RouterLink} to="/">
-                    <ListItemText primary="Home" />
-                </ListItem>
-                {['Portfolio', 'Projects', 'Contact'].map((text) => (
-                    <ListItem button key={text} component={RouterLink} to={`/${text.toLowerCase()}`}>
-                        <ListItemText primary={text} />
+                {navLinks.map(({ title, path }) => (
+                    <ListItem button key={title} component={RouterLink} to={path}>
+                        <ListItemText primary={title} />
                     </ListItem>
                 ))}
             </List>
@@ -42,9 +31,8 @@ const Header = () => {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static" sx={{ backgroundColor: '#5E6378' }}>
                 <Toolbar>
-                    {}
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <Link component={RouterLink} to="/" style={{ textDecoration: 'none', color: 'white' }}>
+                        <Link component={RouterLink} to="/" sx={{ textDecoration: 'none', color: 'white' }}>
                             @axelfrache
                         </Link>
                     </Typography>
@@ -52,25 +40,22 @@ const Header = () => {
                         color="inherit"
                         aria-label="open drawer"
                         edge="end"
-                        onClick={handleDrawerToggle}
+                        onClick={toggleDrawer}
                         sx={{ display: { sm: 'none' } }}
                     >
                         <MenuIcon />
                     </IconButton>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        <Button color="inherit" component={RouterLink} to="/">Home</Button>
-                        <Button color="inherit" component={RouterLink} to="/portfolio">Portfolio</Button>
-                        <Button color="inherit" component={RouterLink} to="/projects">Projects</Button>
-                        <Button color="inherit" component={RouterLink} to="/contact">Contact</Button>
+                        {navLinks.map(({ title, path }) => (
+                            <Button key={title} color="inherit" component={RouterLink} to={path}>
+                                {title}
+                            </Button>
+                        ))}
                     </Box>
                 </Toolbar>
             </AppBar>
-            <Drawer
-                anchor="right"
-                open={drawerOpen}
-                onClose={handleDrawerToggle}
-            >
-                {drawer}
+            <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
+                {drawerContent}
             </Drawer>
         </Box>
     );

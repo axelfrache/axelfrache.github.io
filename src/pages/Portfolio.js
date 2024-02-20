@@ -1,7 +1,9 @@
 import React from 'react';
-import {Container, Typography, Divider, Grid} from '@mui/material';
+import { Container, Typography, Grid, useTheme } from '@mui/material';
 import ExperienceItem from "../components/ExperienceItem";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import AwardCard from "../components/AwardCard";
 import JavaIcon from "../assets/icons/javaIcon.svg";
 import JavaScriptIcon from "../assets/icons/javascriptIcon.svg";
 import ReactIcon from "../assets/icons/reactIcon.png";
@@ -14,9 +16,6 @@ import CommunicativeTeammate from "../assets/certifications/CommunicativeTeammat
 import InvestedInStudentLife from "../assets/certifications/InvestedInStudentLifeBadge.png";
 import ParticipantInTheFresqueDuNumerique from "../assets/certifications/ParticipantInTheFresqueDuNumeriqueBadge.png";
 import Ndi from "../assets/certifications/ndiBadge.png";
-import Footer from "../components/Footer";
-import {useTheme} from "@mui/material/styles";
-import AwardCard from "../components/AwardCard";
 
 
 const awards = [
@@ -41,16 +40,8 @@ const awards = [
     {
         imageUrl: Ndi,
         title: "Nuit de l'info 2022",
-        description: (
-            <span>
-            This badge certifies participation in the 2022 edition of the 'Nuit de l'Info'.
-            My team and I were honored with a <span style={{ color: '#C0C0C0' }}>Silver Medal</span> in the "Mets du Green dans ton IT" challenge proposed by ARHS Group.
-        </span>
-        ),
+        description: "This badge certifies participation in the 2022 edition of the 'Nuit de l'Info'. My team and I were honored with a Silver Medal in the 'Mets du Green dans ton IT' challenge proposed by ARHS Group.",
         link: "https://openbadgefactory.com/v1/assertion/c3a51ca998a7e3d4d11212c8e16252e4a056a861"
-
-
-
     }
 ];
 
@@ -58,11 +49,11 @@ const technicalSkills = [
     { name: "Java", iconPath: JavaIcon },
     { name: "JavaScript", iconPath: JavaScriptIcon },
     { name: "React", iconPath: ReactIcon },
-    {name: "Git", iconPath: GitIcon},
-    {name: "Figma", iconPath: FigmaIcon},
-    {name: "Php", iconPath: PhpIcon},
-    {name: "Linux", iconPath: LinuxIcon},
-    {name: "Postman", iconPath: PostmanIcon}
+    { name: "Git", iconPath: GitIcon },
+    { name: "Figma", iconPath: FigmaIcon },
+    { name: "Php", iconPath: PhpIcon },
+    { name: "Linux", iconPath: LinuxIcon },
+    { name: "Postman", iconPath: PostmanIcon }
 ];
 
 const softSkills = [

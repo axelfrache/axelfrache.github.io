@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-import { Container, Typography, Grid, TextField, MenuItem } from '@mui/material';
+import { Container, Typography, Grid, TextField, MenuItem, useTheme } from '@mui/material';
 import ProjectCard from "../components/ProjectCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
-// Importez les images des projets
-import SavesyncProject from "../assets/savesyncBanner.png"; // Assurez-vous que le chemin est correct
-import PokemonFinder from "../assets/pokemonFinderBanner.png"; // Assurez-vous que le chemin est correct
+import SavesyncProject from "../assets/savesyncBanner.png";
+import PokemonFinder from "../assets/pokemonFinderBanner.png";
 import eVote from "../assets/evoteBanner.png";
-import {useTheme} from "@mui/material/styles"; // Assurez-vous que le chemin est correct
 
-// Définition des projets
 const projects = [
     {
         title: "SaveSync",
@@ -36,23 +32,9 @@ const projects = [
 ];
 
 const Projects = () => {
-
     const theme = useTheme();
-
-    const headerStyle = {
-        color: "#5E6378",
-        fontWeight: 'bold',
-        marginBottom: theme.spacing(2),
-        borderBottom: `2px solid #5E6378`,
-        paddingBottom: theme.spacing(1),
-    };
-
     const [filter, setFilter] = useState('All');
-
-    // Filtre les projets en fonction de la technologie sélectionnée
     const filteredProjects = projects.filter(project => filter === 'All' || project.technologies.includes(filter));
-
-    // Récupère la liste unique de toutes les technologies pour le filtre
     const technologies = ['All', ...new Set(projects.flatMap(project => project.technologies))];
 
     const handleFilterChange = (event) => {
@@ -63,7 +45,13 @@ const Projects = () => {
         <div>
             <Header />
             <Container maxWidth="lg" sx={{ mt: 8 }}>
-                <Typography variant="h4" component="h2" gutterBottom sx={headerStyle}>
+                <Typography variant="h4" component="h2" gutterBottom sx={{
+                    color: "#5E6378",
+                    fontWeight: 'bold',
+                    marginBottom: theme.spacing(2),
+                    borderBottom: `2px solid #5E6378`,
+                    paddingBottom: theme.spacing(1),
+                }}>
                     Projects
                 </Typography>
                 <TextField
@@ -71,7 +59,7 @@ const Projects = () => {
                     label="Filter by Technology"
                     value={filter}
                     onChange={handleFilterChange}
-                    sx={{mt:3, mb: 4, minWidth: 200 }}
+                    sx={{ mt: 3, mb: 4, minWidth: 200 }}
                 >
                     {technologies.map((technology) => (
                         <MenuItem key={technology} value={technology}>

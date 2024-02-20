@@ -1,20 +1,19 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import React from 'react';
+import { styled } from '@mui/material/styles';
+import { Container, Box, Typography, Button, Grid } from '@mui/material';
+import TransitionImage from "../assets/transitionImage.png";
 import avatarImage from "../assets/avatar.png";
+import '../assets/fonts/fonts.css';
+import { Fade } from 'react-awesome-reveal';
 import Header from "../components/Header";
 import ScrollDownArrow from "../components/AnimatedDownArrow";
 import '../App.css';
 import Footer from "../components/Footer";
-import {Grid} from "@mui/material";
 import ProjectCard from "../components/ProjectCard";
-
 import SavesyncProject from "../assets/savesyncBanner.png";
 import PokemonFinder from "../assets/pokemonFinderBanner.png";
 import eVote from "../assets/evoteBanner.png";
+import FullWidthBanner from "../components/FullWidthBanner";
 
 const AvatarImage = styled("img")(({ theme }) => ({
     maxWidth: "100%",
@@ -67,50 +66,40 @@ const Home = () => {
         <div>
             <Header />
             <Container maxWidth="sm">
-                <Box
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                    justifyContent="center"
-                    minHeight="90vh"
-                >
+                <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" minHeight="90vh">
                     <AvatarImage src={avatarImage} alt="Avatar" />
                     <HomeContent>
                         <Typography variant="h4" gutterBottom>
                             Hey, I'm <HighlightedName>Axel</HighlightedName>!
                         </Typography>
                         <Typography variant="h6">
-                            Welcome to my portfolio! I'm a CS student deeply passionate about
-                            development and technology 👨‍💻
+                            Welcome to my portfolio! I'm a CS student deeply passionate about development and technology 👨‍💻
                         </Typography>
-                        <Button
-                            variant="contained"
-                            sx={{
-                                mt: 2,
-                                backgroundColor: '#8F7F92',
-                                '&:hover': {
-                                    backgroundColor: '#72677E',
-                                },
-                            }}
-                        >
+                        <Button variant="contained" sx={{ mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' } }}>
                             Explore my Projects
                         </Button>
-
-
                     </HomeContent>
                     <ScrollDownArrow />
                 </Box>
             </Container>
-            <Container sx={{ py: 8 }} maxWidth="md">
-                <Grid container spacing={4}>
-                    {projects.map((project, index) => (
-                        <Grid item key={index} xs={12} sm={6} md={4}>
-                            <Box sx={{ display: 'flex', height: '100%' }}>
-                                <ProjectCard project={project} />
-                            </Box>
-                        </Grid>
-                    ))}
-                </Grid>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 0, padding: 0 }}>
+                <img src={TransitionImage} alt="transition" style={{ height: '300px', width: 'auto', display: 'block' }} />
+            </div>
+            <FullWidthBanner text="As a third-year student at BUT Informatique and an apprentice developer at Agysoft, I've been passionate about developing technological solutions and solving IT problems since I was very young.
+                            My training and experience at Agysoft, where I worked as an intern and then an apprentice, have strengthened my programming skills and my ability to work on a variety of demanding projects.
+                            I adapt well to multi-disciplinary environments and am always keen to learn more." />
+            <Container sx={{ py: 8, mt: 10 }} maxWidth="md">
+                <Fade>
+                    <Grid container spacing={4}>
+                        {projects.map((project, index) => (
+                            <Grid item key={index} xs={12} sm={6} md={4}>
+                                <Box sx={{ display: 'flex', height: '100%' }}>
+                                    <ProjectCard project={project} />
+                                </Box>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Fade>
             </Container>
             <Footer />
         </div>
