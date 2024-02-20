@@ -1,6 +1,18 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { AppBar, Box, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import {
+    AppBar,
+    Box,
+    Toolbar,
+    Typography,
+    IconButton,
+    Drawer,
+    List,
+    ListItem,
+    ListItemText,
+    Link,
+    Button
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -14,11 +26,10 @@ const Header = () => {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ width: 250 }}>
             <List>
-                {/* Modification ici pour "Home" */}
                 <ListItem button key="Home" component={RouterLink} to="/">
                     <ListItemText primary="Home" />
                 </ListItem>
-                {['Portfolio', 'Projects', 'Contact'].map((text, index) => (
+                {['Portfolio', 'Projects', 'Contact'].map((text) => (
                     <ListItem button key={text} component={RouterLink} to={`/${text.toLowerCase()}`}>
                         <ListItemText primary={text} />
                     </ListItem>
@@ -31,10 +42,11 @@ const Header = () => {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static" sx={{ backgroundColor: '#5E6378' }}>
                 <Toolbar>
+                    {/* Utilisation de RouterLink au lieu de <a> pour @axelfrache */}
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <a href="https://github.com/AxelFrache" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'white' }}>
+                        <Link component={RouterLink} to="/" style={{ textDecoration: 'none', color: 'white' }}>
                             @axelfrache
-                        </a>
+                        </Link>
                     </Typography>
                     <IconButton
                         color="inherit"
@@ -46,7 +58,6 @@ const Header = () => {
                         <MenuIcon />
                     </IconButton>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        {/* Modification ici pour "Home" également */}
                         <Button color="inherit" component={RouterLink} to="/">Home</Button>
                         <Button color="inherit" component={RouterLink} to="/portfolio">Portfolio</Button>
                         <Button color="inherit" component={RouterLink} to="/projects">Projects</Button>
