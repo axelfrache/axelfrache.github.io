@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 import {Grid} from "@mui/material";
 import ProjectCard from "../components/ProjectCard";
 
-import SavesyncProject from "../assets/saveSyncBanner.png";
+import SavesyncProject from "../assets/savesyncBanner.png";
 import PokemonFinder from "../assets/pokemonFinderBanner.png";
 import eVote from "../assets/evoteBanner.png";
 
@@ -105,7 +105,9 @@ const Home = () => {
                 <Grid container spacing={4}>
                     {projects.map((project, index) => (
                         <Grid item key={index} xs={12} sm={6} md={4}>
-                            <ProjectCard project={project} />
+                            <Box sx={{ display: 'flex', height: '100%' }}>
+                                <ProjectCard project={project} />
+                            </Box>
                         </Grid>
                     ))}
                 </Grid>
