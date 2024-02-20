@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0a47a9f0.css",
+    "main.js": "/static/js/main.bf2eb6ab.js",
+    "static/js/453.9415623e.chunk.js": "/static/js/453.9415623e.chunk.js",
+    "static/media/avatar.png": "/static/media/avatar.365091fc7f3101148006.png",
+    "static/media/ParticipantInTheFresqueDuNumeriqueBadge.png": "/static/media/ParticipantInTheFresqueDuNumeriqueBadge.844f6438642af777b12e.png",
+    "static/media/InvestedInStudentLifeBadge.png": "/static/media/InvestedInStudentLifeBadge.09abe7315fa833ea5463.png",
+    "static/media/CommunicativeTeammateBadge.png": "/static/media/CommunicativeTeammateBadge.fb7caddaf517a96fc48a.png",
+    "static/media/ndiBadge.png": "/static/media/ndiBadge.e9789851a95720f5a2f4.png",
+    "static/media/phpIcon.png": "/static/media/phpIcon.c67d24b47808dc6611ed.png",
+    "static/media/evoteBanner.png": "/static/media/evoteBanner.051b422b9bab2c8f639f.png",
+    "static/media/pokemonFinderBanner.png": "/static/media/pokemonFinderBanner.42b0b6ebbe9fb22051a0.png",
+    "static/media/javaIcon.svg": "/static/media/javaIcon.e09b59c616cb6423c36143d61ffad0b6.svg",
+    "static/media/gitIcon.svg": "/static/media/gitIcon.9e5efe4a58d251d445603088a1667119.svg",
+    "index.html": "/index.html",
+    "static/media/figmaIcon.svg": "/static/media/figmaIcon.d1f9b35e630b34a2f93bdae777429ee1.svg",
+    "static/media/javascriptIcon.svg": "/static/media/javascriptIcon.2669786e31e5ae032b2489badaa248dd.svg",
+    "main.0a47a9f0.css.map": "/static/css/main.0a47a9f0.css.map",
+    "main.bf2eb6ab.js.map": "/static/js/main.bf2eb6ab.js.map",
+    "453.9415623e.chunk.js.map": "/static/js/453.9415623e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a47a9f0.css",
+    "static/js/main.bf2eb6ab.js"
+  ]
+}
