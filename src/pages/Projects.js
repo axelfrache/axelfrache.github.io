@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import SavesyncProject from "../assets/savesyncBanner.png";
 import PokemonFinder from "../assets/pokemonFinderBanner.png";
 import eVote from "../assets/evoteBanner.png";
+import VinylAvenue from "../assets/vinylavenueBanner.png";
+import SpringMultipartRestAPI from "../assets/springMultipartRestApiBanner.png";
 
 const projects = [
     {
@@ -28,7 +30,22 @@ const projects = [
         imageUrl: eVote,
         projectUrl: "https://github.com/SAE-DACS-S4",
         technologies: ["Java"]
+    },
+    {
+        title: "Vinyl Avenue",
+        description: "Vinyl Avenue is an academic project dedicated to crafting a unique e-commerce experience for vinyl and audio equipment enthusiasts, offering a diverse product range to satisfy all musical tastes.",
+        imageUrl: VinylAvenue,
+        projectUrl: "https://github.com/axelfrache/VinylAvenue",
+        technologies: ["PHP"]
+    },
+    {
+        title: "Spring Multipart Rest API",
+        description: "SpringMultipartRestAPI is a Spring Boot application that streamlines file upload, download, and deletion processes through a RESTful API, utilizing Spring's robust capabilities for secure and efficient multipart file handling and management.",
+        imageUrl: SpringMultipartRestAPI,
+        projectUrl: "https://github.com/axelfrache/SpringMultipartRestAPI",
+        technologies: ["Java"]
     }
+
 ];
 
 const Projects = () => {

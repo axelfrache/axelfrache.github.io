@@ -82,8 +82,8 @@ const Home = () => {
                     <ScrollDownArrow />
                 </Box>
             </Container>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 0, padding: 0 }}>
-                <img src={TransitionImage} alt="transition" style={{ height: '300px', width: 'auto', display: 'block' }} />
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 0, padding: 0, marginTop: 50}}>
+                <img src={TransitionImage} alt="transition" style={{ height: '250px', width: 'auto', display: 'block' }} />
             </div>
             <FullWidthBanner text="As a third-year student at BUT Informatique and an apprentice developer at Agysoft, I've been passionate about developing technological solutions and solving IT problems since I was very young.
                             My training and experience at Agysoft, where I worked as an intern and then an apprentice, have strengthened my programming skills and my ability to work on a variety of demanding projects.
