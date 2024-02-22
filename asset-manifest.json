@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0d9e90e9.css",
-    "main.js": "/static/js/main.a73baa57.js",
+    "main.js": "/static/js/main.53d5310f.js",
     "static/js/453.9415623e.chunk.js": "/static/js/453.9415623e.chunk.js",
     "static/media/avatar.png": "/static/media/avatar.365091fc7f3101148006.png",
     "static/media/ParticipantInTheFresqueDuNumeriqueBadge.png": "/static/media/ParticipantInTheFresqueDuNumeriqueBadge.844f6438642af777b12e.png",
@@ -9,7 +9,7 @@
     "static/media/InvestedInStudentLifeBadge.png": "/static/media/InvestedInStudentLifeBadge.09abe7315fa833ea5463.png",
     "static/media/CommunicativeTeammateBadge.png": "/static/media/CommunicativeTeammateBadge.fb7caddaf517a96fc48a.png",
     "static/media/ndiBadge.png": "/static/media/ndiBadge.e9789851a95720f5a2f4.png",
-    "static/media/transitionImage.png": "/static/media/transitionImage.73bd113966252ecf7cd9.png",
+    "static/media/transitionImage.png": "/static/media/transitionImage.092186b2e2def1dbba68.png",
     "static/media/phpIcon.png": "/static/media/phpIcon.c67d24b47808dc6611ed.png",
     "static/media/vinylavenueBanner.png": "/static/media/vinylavenueBanner.b3c734dbda1179c90d20.png",
     "static/media/evoteBanner.png": "/static/media/evoteBanner.051b422b9bab2c8f639f.png",
@@ -20,11 +20,11 @@
     "static/media/figmaIcon.svg": "/static/media/figmaIcon.d1f9b35e630b34a2f93bdae777429ee1.svg",
     "static/media/javascriptIcon.svg": "/static/media/javascriptIcon.2669786e31e5ae032b2489badaa248dd.svg",
     "main.0d9e90e9.css.map": "/static/css/main.0d9e90e9.css.map",
-    "main.a73baa57.js.map": "/static/js/main.a73baa57.js.map",
+    "main.53d5310f.js.map": "/static/js/main.53d5310f.js.map",
     "453.9415623e.chunk.js.map": "/static/js/453.9415623e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0d9e90e9.css",
-    "static/js/main.a73baa57.js"
+    "static/js/main.53d5310f.js"
   ]
 }
