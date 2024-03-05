@@ -110,12 +110,7 @@ const Portfolio = () => {
                 </Typography>
             </Container>
 
-            <Box
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                gap={2} // Ajoute un espacement entre les éléments enfants
-            >
+            <Box display="flex" justifyContent="center" alignItems="center" gap={2}>
                 {/* Bouton pour ouvrir le CV PDF dans un nouvel onglet */}
                 <Button variant="contained" component="a" href={`${process.env.PUBLIC_URL}/assets/CV-Axel-Frache.pdf`} sx={{ mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' }}} target="_blank" rel="noopener noreferrer">
                     View resume
@@ -131,8 +126,6 @@ const Portfolio = () => {
                     GitHub
                 </Button>
             </Box>
-            );
-            };
 
             <Container maxWidth="md" sx={{ mt: 8 }}>
                 <Typography variant="h5" component="h2" gutterBottom sx={headerStyle}>
