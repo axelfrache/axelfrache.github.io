@@ -10,7 +10,6 @@ const AwardCard = ({ award }) => {
         alignItems: 'center',
         mb: 2,
         overflow: 'hidden',
-
     };
 
     const mediaStyles = {
@@ -43,11 +42,11 @@ const AwardCard = ({ award }) => {
                 />
                 <CardContent sx={contentStyles}>
                     <Box>
-                        <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: { xs: '1.5rem', sm: '2rem' } }}>
+                        <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: { xs: '1.5rem', sm: '2rem' }, fontFamily: 'CentraRegular' }}>
                             {title}
                         </Typography>
                         <Divider variant="left" sx={{ bgcolor: 'primary.main', my: 1 }} />
-                        <Typography variant="subtitle1" component="p" sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}>
+                        <Typography variant="subtitle1" component="p" sx={{ fontSize: { xs: '0.875rem', sm: '1rem', fontFamily: 'CentraRegular'} }}>
                             <b>Description:</b> {description}
                         </Typography>
                     </Box>

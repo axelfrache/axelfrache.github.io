@@ -6,6 +6,7 @@ const HighlightedName = styled("span")(({ theme }) => ({
     fontWeight: 700,
     color: '#8F7F92',
     marginRight: theme.spacing(1),
+    fontFamily: 'CentraRegular',
 }));
 
 const ExperienceItem = ({ title, period, company }) => {
@@ -14,8 +15,8 @@ const ExperienceItem = ({ title, period, company }) => {
             <Typography variant="h6" component="div">
                 <HighlightedName>{title}</HighlightedName>
             </Typography>
-            <Typography color="textSecondary">{period}</Typography>
-            <Typography color="textSecondary">{company}</Typography>
+            <Typography fontFamily="CentraRegular" color="textSecondary">{period}</Typography>
+            <Typography fontFamily="CentraRegular" color="textSecondary">{company}</Typography>
         </Paper>
     );
 };

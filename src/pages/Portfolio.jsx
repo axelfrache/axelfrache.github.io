@@ -33,7 +33,7 @@ const awards = [
     },
     {
         imageUrl: ParticipantInTheFresqueDuNumerique,
-        title: "Fresque du Numérique",
+        title: "Fresque du Numerique",
         description: "This badge certifies participation in a collective intelligence workshop at the 'Fresque du Numérique'.",
         link: "https://openbadgefactory.com/v1/assertion/aaa0765b1dd0f2077d08504bdc82454fa44421ee"
     },
@@ -71,6 +71,7 @@ const Portfolio = () => {
         marginBottom: theme.spacing(2),
         borderBottom: `2px solid #5E6378`,
         paddingBottom: theme.spacing(1),
+        fontFamily: 'CentraRegular'
     };
 
     return (
@@ -81,24 +82,24 @@ const Portfolio = () => {
                 <Typography variant="h4" component="h2" gutterBottom sx={headerStyle}>
                     About Me
                 </Typography>
-                <Typography variant="body1" paragraph>
+                <Typography variant="body1" paragraph sx={{fontFamily:'CentraRegular'}}>
                     Hello! I'm Axel, a third-year computer science student with a lifelong passion for technology.
                     My fascination with computing began at an early age and swiftly evolved into a pursuit of knowledge across a broad spectrum of programming languages and technologies.
                 </Typography>
-                <Typography variant="body1" paragraph>
+                <Typography variant="body1" paragraph sx={{fontFamily:'CentraRegular'}}>
                     My journey in the world of development kicked off with VB.net, where I tackled the intricacies of chat applications using sockets.
                     This early experience sparked a desire to broaden my technical repertoire, fueling my curiosity to explore and understand a diverse range of programming languages to enhance my computer science acumen.
                 </Typography>
-                <Typography variant="body1" paragraph>
+                <Typography variant="body1" paragraph sx={{fontFamily:'CentraRegular'}}>
                     My academic path has been complemented by a professional apprenticeship in a corporate setting, where I have been instrumental in a variety of assignments.
                     These experiences have not only broadened my technical expertise but have also ingrained in me the principles of sustainable architecture and the significance of user-driven design.
                 </Typography>
-                <Typography variant="body1" paragraph>
+                <Typography variant="body1" paragraph sx={{fontFamily:'CentraRegular'}}>
                     Parallel to my academic pursuits, team-based projects have been a cornerstone of my educational experience.
                     They've equipped me with the ability to seamlessly integrate into various teams, adapting to new dynamics and fostering a collaborative spirit.
                     My commitment to teamwork is matched by a deep-seated enthusiasm for creating user-centric designs that simplify and enrich the user experience.
                 </Typography>
-                <Typography variant="body1" paragraph>
+                <Typography variant="body1" paragraph sx={{fontFamily:'CentraRegular'}}>
                     As I continue my professional journey, I seek to blend innovative design with robust development practices to craft solutions that make a meaningful impact.
                 </Typography>
             </Container>

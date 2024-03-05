@@ -14,10 +14,10 @@ const ProjectCard = ({ project }) => {
                     alt={title}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h5" component="div" sx={{fontFamily:"CentraRegular"}}>
                         {title}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{fontFamily:"CentraLight"}}>
                         {description}
                     </Typography>
                 </CardContent>

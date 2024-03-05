@@ -16,7 +16,7 @@ const Header = () => {
     const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
     const drawerContent = (
-        <Box onClick={toggleDrawer} sx={{ width: 250 }}>
+        <Box onClick={toggleDrawer} sx={{ width: 250, fontFamily: 'CentraRegular' }}>
             <List>
                 {navLinks.map(({ title, path }) => (
                     <ListItem button key={title} component={RouterLink} to={path}>
@@ -32,7 +32,7 @@ const Header = () => {
             <AppBar position="static" sx={{ backgroundColor: '#5E6378' }}>
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <Link component={RouterLink} to="/" sx={{ textDecoration: 'none', color: 'white' }}>
+                        <Link component={RouterLink} to="/" sx={{ textDecoration: 'none', color: 'white'}}>
                             @axelfrache
                         </Link>
                     </Typography>
@@ -45,7 +45,7 @@ const Header = () => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <Box sx={{ display: { xs: 'none', sm: 'block', fontFamily: 'CentraRegular' } }}>
                         {navLinks.map(({ title, path }) => (
                             <Button key={title} color="inherit" component={RouterLink} to={path}>
                                 {title}
