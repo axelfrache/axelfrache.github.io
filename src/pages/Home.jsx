@@ -111,7 +111,7 @@ const Home = () => {
                     <Typography variant="h4" component="h2" gutterBottom sx={{ color: "#5E6378", fontWeight: 'bold', textAlign: 'center', fontFamily: 'CentraRegular'}}>
                         Recent projects
                     </Typography>
-                    <Divider variant="left" sx={{ bgcolor: 'primary.main', my: 1, marginBottom: 4, mb: 7 }} />
+                    <Divider variant="left" sx={{ bgcolor:'#5E6378', my: 1, marginBottom: 4, mb: 7 }} />
                     <Grid container spacing={4}>
                         {projects.map((project, index) => (
                             <Grid item key={index} xs={12} sm={6} md={4}>
@@ -134,7 +134,7 @@ const Home = () => {
                     <Typography variant="h4" component="h2" gutterBottom sx={{ color: "#5E6378", fontWeight: 'bold', textAlign: 'center', fontFamily: 'CentraRegular'}}>
                         Skills
                     </Typography>
-                    <Divider variant="left" sx={{ bgcolor: 'primary.main', my: 1, marginBottom: 4, mb: 7 }} />
+                    <Divider variant="left" sx={{ bgcolor:'#5E6378', my: 1, marginBottom: 4, mb: 7 }} />
                     <Zoom duration={500} triggerOnce>
                         <Grid container spacing={2} justifyContent="center">
                             {technicalSkills.map(({ name, iconPath }) => (

@@ -45,7 +45,7 @@ const AwardCard = ({ award }) => {
                         <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: { xs: '1.5rem', sm: '2rem' }, fontFamily: 'CentraRegular' }}>
                             {title}
                         </Typography>
-                        <Divider variant="left" sx={{ bgcolor: 'primary.main', my: 1 }} />
+                        <Divider variant="left" sx={{ bgcolor:'#5E6378', my: 1 }} />
                         <Typography variant="subtitle1" component="p" sx={{ fontSize: { xs: '0.875rem', sm: '1rem', fontFamily: 'CentraRegular'} }}>
                             <b>Description:</b> {description}
                         </Typography>
