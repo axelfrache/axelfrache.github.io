@@ -1,10 +1,11 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
-import { Container, Box, Typography, Button, Grid } from '@mui/material';
-import TransitionImage from "../assets/transitionImage.png";
+import {Container, Box, Typography, Button, Grid, Divider} from '@mui/material';
 import avatarImage from "../assets/avatar.png";
 import '../assets/fonts/fonts.css';
-import {Bounce, Fade, Zoom} from 'react-awesome-reveal';
+import {Fade, Zoom} from 'react-awesome-reveal';
+import { Link } from 'react-scroll';
+import {Link as RouterLink} from "react-router-dom";
 import Header from "../components/Header";
 import ScrollDownArrow from "../components/AnimatedDownArrow";
 import '../App.css';
@@ -13,7 +14,6 @@ import ProjectCard from "../components/ProjectCard";
 import SavesyncProject from "../assets/savesyncBanner.png";
 import PokemonFinder from "../assets/pokemonFinderBanner.png";
 import eVote from "../assets/evoteBanner.png";
-import FullWidthBanner from "../components/FullWidthBanner";
 import JavaIcon from "../assets/icons/javaIcon.svg";
 import JavaScriptIcon from "../assets/icons/javascriptIcon.svg";
 import ReactIcon from "../assets/icons/reactIcon.png";
@@ -22,6 +22,7 @@ import FigmaIcon from "../assets/icons/figmaIcon.svg";
 import PhpIcon from "../assets/icons/phpIcon.png";
 import LinuxIcon from "../assets/icons/linuxIcon.png";
 import PostmanIcon from "../assets/icons/postmanIcon.png";
+
 
 const AvatarImage = styled("img")(({ theme }) => ({
     maxWidth: "100%",
@@ -37,12 +38,6 @@ const HomeContent = styled(Box)(({ theme }) => ({
     textAlign: "center",
     borderRadius: theme.shape.borderRadius,
     padding: theme.spacing(4),
-}));
-
-const HighlightedName = styled("span")(({ theme }) => ({
-    fontWeight: 700,
-    color: '#8F7F92',
-    marginRight: theme.spacing(1),
 }));
 
 const projects = [
@@ -101,22 +96,22 @@ const Home = () => {
                                 Welcome to my portfolio! I'm a CS student deeply passionate about development and technology 👨‍💻
                             </Typography>
                             <Button variant="contained" sx={{ mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' } }}>
-                                Explore my Projects
+                                <Link to="recent-projects" smooth={true} duration={500} spy={true} exact="true" offset={-70}>
+                                    Explore my Projects
+                                </Link>
                             </Button>
-
                         </Zoom>
-
-
                     </HomeContent>
                     <ScrollDownArrow />
                 </Box>
             </Container>
 
-            <Container sx={{ py: 8, mt: 10 }} maxWidth="md">
+            <Container sx={{ py: 8, mt: 10, alignItems: 'center' }} maxWidth="md" id="recent-projects">
                 <Fade>
-                    <Typography variant="h4" component="h2" gutterBottom sx={{ color: "#5E6378", fontWeight: 'bold', marginBottom: 4, textAlign: 'center', mb: 7, fontFamily: 'CentraRegular'}}>
+                    <Typography variant="h4" component="h2" gutterBottom sx={{ color: "#5E6378", fontWeight: 'bold', textAlign: 'center', fontFamily: 'CentraRegular'}}>
                         Recent projects
                     </Typography>
+                    <Divider variant="left" sx={{ bgcolor: 'primary.main', my: 1, marginBottom: 4, mb: 7 }} />
                     <Grid container spacing={4}>
                         {projects.map((project, index) => (
                             <Grid item key={index} xs={12} sm={6} md={4}>
@@ -126,21 +121,29 @@ const Home = () => {
                             </Grid>
                         ))}
                     </Grid>
+                    <Box display="flex" justifyContent="center" mt={4}>
+                        <Button variant="contained" component={RouterLink} to="/projects" sx={{backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' } }}>
+                            Show more
+                        </Button>
+                    </Box>
                 </Fade>
             </Container>
 
             <Container sx={{ py: 8 }} maxWidth="md">
                 <Fade>
-                    <Typography variant="h4" component="h2" gutterBottom sx={{ color: "#5E6378", fontWeight: 'bold', marginBottom: 4, textAlign: 'center', mb: 7, fontFamily: 'CentraRegular'}}>
+                    <Typography variant="h4" component="h2" gutterBottom sx={{ color: "#5E6378", fontWeight: 'bold', textAlign: 'center', fontFamily: 'CentraRegular'}}>
                         Skills
                     </Typography>
-                    <Grid container spacing={2} justifyContent="center">
-                        {technicalSkills.map(({ name, iconPath }) => (
-                            <Grid item xs={4} sm={2} md={2} mb={4} key={name} sx={{ textAlign: 'center' }}>
-                                {iconPath ? <img src={iconPath} alt={name} style={{ width: 40, height: 40 }} /> : <Typography>{name}</Typography>}
-                            </Grid>
-                        ))}
-                    </Grid>
+                    <Divider variant="left" sx={{ bgcolor: 'primary.main', my: 1, marginBottom: 4, mb: 7 }} />
+                    <Zoom duration={500} triggerOnce>
+                        <Grid container spacing={2} justifyContent="center">
+                            {technicalSkills.map(({ name, iconPath }) => (
+                                <Grid item xs={4} sm={2} md={2} mb={4} key={name} sx={{ textAlign: 'center' }}>
+                                    {iconPath ? <img src={iconPath} alt={name} style={{ width: 40, height: 40 }} /> : <Typography>{name}</Typography>}
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Zoom>
                 </Fade>
             </Container>
 

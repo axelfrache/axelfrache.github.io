@@ -4,6 +4,7 @@ import ExperienceItem from "../components/ExperienceItem";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AwardCard from "../components/AwardCard";
+import {Fade, Zoom} from 'react-awesome-reveal';
 import JavaIcon from "../assets/icons/javaIcon.svg";
 import JavaScriptIcon from "../assets/icons/javascriptIcon.svg";
 import ReactIcon from "../assets/icons/reactIcon.png";
@@ -17,6 +18,11 @@ import InvestedInStudentLife from "../assets/certifications/InvestedInStudentLif
 import ParticipantInTheFresqueDuNumerique from "../assets/certifications/ParticipantInTheFresqueDuNumeriqueBadge.png";
 import Ndi from "../assets/certifications/ndiBadge.png";
 
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+// Importez les icônes si vous souhaitez les utiliser
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const awards = [
     {
@@ -68,10 +74,10 @@ const Portfolio = () => {
     const headerStyle = {
         color: "#5E6378",
         fontWeight: 'bold',
-        marginBottom: theme.spacing(2),
+        marginBottom: theme.spacing(4),
         borderBottom: `2px solid #5E6378`,
         paddingBottom: theme.spacing(1),
-        fontFamily: 'CentraRegular'
+        fontFamily: 'CentraRegular',
     };
 
     return (
@@ -103,42 +109,70 @@ const Portfolio = () => {
                     As I continue my professional journey, I seek to blend innovative design with robust development practices to craft solutions that make a meaningful impact.
                 </Typography>
             </Container>
+
+            <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                gap={2} // Ajoute un espacement entre les éléments enfants
+            >
+                {/* Bouton pour ouvrir le CV PDF dans un nouvel onglet */}
+                <Button variant="contained" component="a" href={`${process.env.PUBLIC_URL}/assets/CV-Axel-Frache.pdf`} sx={{ mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' }}} target="_blank" rel="noopener noreferrer">
+                    View resume
+                </Button>
+
+                {/* Bouton pour rediriger vers LinkedIn */}
+                <Button variant="contained" component="a" href="https://www.linkedin.com/in/axel-frache" sx={{ mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' }}} target="_blank" rel="noopener noreferrer" startIcon={<LinkedInIcon />}>
+                    LinkedIn
+                </Button>
+
+                {/* Bouton pour rediriger vers GitHub */}
+                <Button variant="contained" component="a" href="https://github.com/axelfrache" sx={{ mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' }}} target="_blank" rel="noopener noreferrer" startIcon={<GitHubIcon />}>
+                    GitHub
+                </Button>
+            </Box>
+            );
+            };
+
             <Container maxWidth="md" sx={{ mt: 8 }}>
                 <Typography variant="h5" component="h2" gutterBottom sx={headerStyle}>
                     Work Experience
                 </Typography>
-                <ExperienceItem
-                    title="Software Developer (Apprenticeship)"
-                    period="09/2023 - Present"
-                    company="Agysoft"
-                />
-                <ExperienceItem
-                    title="Developer Assistant (Fixed-Term Contract)"
-                    period="07/2023"
-                    company="Agysoft"
-                />
-                <ExperienceItem
-                    title="Web Development Intern"
-                    period="04/2023 - 06/2023"
-                    company="Agysoft"
-                />
+                <Fade triggerOnce>
+                    <ExperienceItem
+                        title="Software Developer (Apprenticeship)"
+                        period="09/2023 - Present"
+                        company="Agysoft"
+                    />
+                    <ExperienceItem
+                        title="Developer Assistant (Fixed-Term Contract)"
+                        period="07/2023"
+                        company="Agysoft"
+                    />
+                    <ExperienceItem
+                        title="Web Development Intern"
+                        period="04/2023 - 06/2023"
+                        company="Agysoft"
+                    />
+                </Fade>
             </Container>
 
             <Container maxWidth="md" sx={{ mt: 8 }}>
-                {/* Section Education */}
                 <Typography variant="h5" component="h2" gutterBottom sx={headerStyle}>
                     Education
                 </Typography>
-                <ExperienceItem
-                    title="Bachelor of Technology in Computer Science"
-                    period="09/2021 - 07/2024"
-                    company="University Institute of Technology Montpellier-Sète"
-                />
-                <ExperienceItem
-                    title="Baccalaureate in Science and Technology of Industry and Sustainable Development, Digital Systems Option"
-                    period="09/2018 - 07/2021"
-                    company="Dhuoda High School"
-                />
+                <Fade triggerOnce>
+                    <ExperienceItem
+                        title="Bachelor of Technology in Computer Science"
+                        period="09/2021 - 07/2024"
+                        company="University Institute of Technology Montpellier-Sète"
+                    />
+                    <ExperienceItem
+                        title="Baccalaureate in Science and Technology of Industry and Sustainable Development, Digital Systems Option"
+                        period="09/2018 - 07/2021"
+                        company="Dhuoda High School"
+                    />
+                </Fade>
             </Container>
             <Container maxWidth="md" sx={{ mt: 8 }}>
                 <Typography variant="h5" component="h2" gutterBottom sx={headerStyle}>
@@ -150,30 +184,34 @@ const Portfolio = () => {
                     ))}
                 </Grid>
             </Container>
-            <Container maxWidth="md" sx={{ mt: 8 }}>
+            <Container maxWidth="md" sx={{ mt: 8}}>
                 {/* Section Skills */}
                 <Typography variant="h5" component="h2" gutterBottom sx={headerStyle}>
                     Technical Skills
                 </Typography>
-                <Grid container spacing={2}>
-                    {technicalSkills.map(({ name, iconPath }) => (
-                        <Grid item xs={4} sm={2} md={2} key={name} sx={{ textAlign: 'center' }}>
-                            {iconPath ? <img src={iconPath} alt={name} style={{ width: 40, height: 40 }} /> : <Typography>{name}</Typography>}
-                        </Grid>
-                    ))}
-                </Grid>
+                <Zoom triggerOnce>
+                    <Grid container spacing={2} justifyContent="center">
+                        {technicalSkills.map(({ name, iconPath }) => (
+                            <Grid item xs={4} sm={2} md={2} mb={4} key={name} sx={{ textAlign: 'center' }}>
+                                {iconPath ? <img src={iconPath} alt={name} style={{ width: 40, height: 40 }} /> : <Typography>{name}</Typography>}
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Zoom>
             </Container>
             <Container maxWidth="md" sx={{ mt: 8 }}>
-                <Typography variant="h5" component="h2" sx={{ ...headerStyle, mt: 4 }} gutterBottom>
+                <Typography variant="h5" component="h2" sx={{ ...headerStyle, mt: 4}} gutterBottom>
                     Soft Skills
                 </Typography>
-                <Grid container spacing={2}>
-                    {softSkills.map(({ name }) => (
-                        <Grid item xs={12} sm={6} md={4} key={name} sx={{ textAlign: 'center' }}>
-                            <Typography>{name}</Typography>
-                        </Grid>
-                    ))}
-                </Grid>
+                <Zoom triggerOnce>
+                    <Grid container spacing={2}>
+                        {softSkills.map(({ name }) => (
+                            <Grid item xs={12} sm={6} md={4} key={name} sx={{ textAlign: 'center' }}>
+                                <Typography>{name}</Typography>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Zoom>
             </Container>
             <Footer />
         </div>

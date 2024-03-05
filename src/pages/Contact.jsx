@@ -10,13 +10,13 @@ import avatarImage from "../assets/avatar.png";
 const Contact = () => (
     <div>
         <Header />
-        <Container maxWidth="md" sx={{ mt: 8, display: 'flex', justifyContent: 'center' }}>
+        <Container maxWidth="md" sx={{mt: 8, display: 'flex', justifyContent: 'center' }}>
             <Card sx={{ width: '100%', maxWidth: 600, textAlign: 'center', overflow: 'hidden', py: 5 }}>
                 <Box sx={{ position: 'relative', display: 'inline-flex', justifyContent: 'center', width: '100%' }}>
                     <Avatar src={avatarImage} alt="Axel" sx={{ width: 160, height: 160, border: '4px solid white' }} />
                 </Box>
                 <CardContent>
-                    <Typography variant="h4" sx={{ my: 2 }}>
+                    <Typography variant="h4" sx={{ my: 2, fontFamily:'CentraExtrabold'}}>
                         Axel Frache
                     </Typography>
                     <Grid container justifyContent="center" spacing={2}>
@@ -36,8 +36,8 @@ const Contact = () => (
                             </IconButton>
                         </Grid>
                     </Grid>
-                    <Typography variant="h6" sx={{ mt: 3 }}>
-                        Contact me to discuss potential projects or exchange views on current technological trends!
+                    <Typography variant="h6" sx={{ mt: 3, fontFamily:'CentraRegular' }}>
+                        Contact me to discuss potential projects or exchange views on current technological trends !
                     </Typography>
                 </CardContent>
             </Card>
