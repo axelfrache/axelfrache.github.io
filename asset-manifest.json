@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6f09c646.css",
-    "main.js": "/static/js/main.81a91aea.js",
+    "main.css": "/static/css/main.8fa63bac.css",
+    "main.js": "/static/js/main.15c278f5.js",
     "static/js/453.9415623e.chunk.js": "/static/js/453.9415623e.chunk.js",
     "static/media/avatar.png": "/static/media/avatar.365091fc7f3101148006.png",
     "static/media/ParticipantInTheFresqueDuNumeriqueBadge.png": "/static/media/ParticipantInTheFresqueDuNumeriqueBadge.844f6438642af777b12e.png",
@@ -14,19 +14,22 @@
     "static/media/CentraNo2-Light.ttf": "/static/media/CentraNo2-Light.3fbc166aaafa97aac45d.ttf",
     "static/media/evoteBanner.png": "/static/media/evoteBanner.051b422b9bab2c8f639f.png",
     "static/media/CentraNo2-Book.ttf": "/static/media/CentraNo2-Book.72c0fe58795586249b47.ttf",
+    "static/media/dockerIcon.png": "/static/media/dockerIcon.c1f953a3ead577c05d04.png",
     "static/media/pokemonFinderBanner.png": "/static/media/pokemonFinderBanner.42b0b6ebbe9fb22051a0.png",
     "static/media/CentraNo2-Extrabold.ttf": "/static/media/CentraNo2-Extrabold.f234105bd9a6633e4a7b.ttf",
+    "static/media/CentraNo2-Bold.ttf": "/static/media/CentraNo2-Bold.b61fc644acf0c61b7549.ttf",
+    "static/media/savesyncBanner.png": "/static/media/savesyncBanner.9724e49ccefc018e6678.png",
     "static/media/javaIcon.svg": "/static/media/javaIcon.e09b59c616cb6423c36143d61ffad0b6.svg",
     "index.html": "/index.html",
     "static/media/gitIcon.svg": "/static/media/gitIcon.9e5efe4a58d251d445603088a1667119.svg",
     "static/media/figmaIcon.svg": "/static/media/figmaIcon.d1f9b35e630b34a2f93bdae777429ee1.svg",
     "static/media/javascriptIcon.svg": "/static/media/javascriptIcon.2669786e31e5ae032b2489badaa248dd.svg",
-    "main.6f09c646.css.map": "/static/css/main.6f09c646.css.map",
-    "main.81a91aea.js.map": "/static/js/main.81a91aea.js.map",
+    "main.8fa63bac.css.map": "/static/css/main.8fa63bac.css.map",
+    "main.15c278f5.js.map": "/static/js/main.15c278f5.js.map",
     "453.9415623e.chunk.js.map": "/static/js/453.9415623e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f09c646.css",
-    "static/js/main.81a91aea.js"
+    "static/css/main.8fa63bac.css",
+    "static/js/main.15c278f5.js"
   ]
 }
