@@ -1,7 +1,8 @@
- import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { AppBar, Box, Toolbar, Typography, IconButton, Drawer, List, ListItem, ListItemText, Link, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as RouterLink } from 'react-router-dom';
+import '../assets/fonts/fonts.css';
 
 const navLinks = [
     { title: 'Home', path: '/' },
@@ -16,7 +17,7 @@ const Header = () => {
     const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
     const drawerContent = (
-        <Box onClick={toggleDrawer} sx={{ width: 250, fontFamily: 'CentraRegular' }}>
+        <Box onClick={toggleDrawer} sx={{ width: 250, fontFamily: 'CentraBold' }}>
             <List>
                 {navLinks.map(({ title, path }) => (
                     <ListItem button key={title} component={RouterLink} to={path}>
@@ -45,9 +46,9 @@ const Header = () => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Box sx={{ display: { xs: 'none', sm: 'block', fontFamily: 'CentraRegular' } }}>
+                    <Box sx={{ display: { xs: 'none', sm: 'block'} }}>
                         {navLinks.map(({ title, path }) => (
-                            <Button key={title} color="inherit" component={RouterLink} to={path}>
+                            <Button sx={{fontFamily:'CentraRegular'}} key={title} color="inherit" component={RouterLink} to={path}>
                                 {title}
                             </Button>
                         ))}

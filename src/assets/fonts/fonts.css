@@ -11,6 +11,12 @@
 }
 
 @font-face {
+    font-family: 'CentraBold';
+    font-style: normal;
+    src: url('./CentraNo2-Bold.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'CentraRegular';
     font-style: normal;
     src: url('./CentraNo2-Book.ttf') format('truetype');

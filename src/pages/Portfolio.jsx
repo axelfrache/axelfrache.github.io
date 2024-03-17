@@ -12,6 +12,7 @@ import GitIcon from "../assets/icons/gitIcon.svg";
 import FigmaIcon from "../assets/icons/figmaIcon.svg";
 import PhpIcon from "../assets/icons/phpIcon.png";
 import LinuxIcon from "../assets/icons/linuxIcon.png";
+import DockerIcon from "../assets/icons/dockerIcon.png";
 import PostmanIcon from "../assets/icons/postmanIcon.png";
 import CommunicativeTeammate from "../assets/certifications/CommunicativeTeammateBadge.png";
 import InvestedInStudentLife from "../assets/certifications/InvestedInStudentLifeBadge.png";
@@ -20,7 +21,6 @@ import Ndi from "../assets/certifications/ndiBadge.png";
 
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-// Importez les icônes si vous souhaitez les utiliser
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
@@ -55,16 +55,23 @@ const technicalSkills = [
     { name: "Java", iconPath: JavaIcon },
     { name: "JavaScript", iconPath: JavaScriptIcon },
     { name: "React", iconPath: ReactIcon },
-    { name: "Git", iconPath: GitIcon },
-    { name: "Figma", iconPath: FigmaIcon },
     { name: "Php", iconPath: PhpIcon },
+    { name: "Git", iconPath: GitIcon },
+    { name: "Docker", iconPath: DockerIcon },
+    { name: "Figma", iconPath: FigmaIcon },
     { name: "Linux", iconPath: LinuxIcon },
     { name: "Postman", iconPath: PostmanIcon }
 ];
 
+
 const softSkills = [
     { name: "Teamwork" },
     { name: "Problem-solving" },
+    { name: "Rigorous" },
+    { name: "Methodical" },
+    { name: "Independent" },
+    { name: "Strong writing skills" },
+    { name: "Attention to detail" },
 ];
 
 const Portfolio = () => {
@@ -197,9 +204,9 @@ const Portfolio = () => {
                     Soft Skills
                 </Typography>
                 <Zoom triggerOnce>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2} justifyContent="center" >
                         {softSkills.map(({ name }) => (
-                            <Grid item xs={12} sm={6} md={4} key={name} sx={{ textAlign: 'center' }}>
+                            <Grid item xs={12} sm={6} md={4} key={name} sx={{ textAlign: 'center', fontFamily:'CentraRegular'}}>
                                 <Typography>{name}</Typography>
                             </Grid>
                         ))}

@@ -21,6 +21,7 @@ import GitIcon from "../assets/icons/gitIcon.svg";
 import FigmaIcon from "../assets/icons/figmaIcon.svg";
 import PhpIcon from "../assets/icons/phpIcon.png";
 import LinuxIcon from "../assets/icons/linuxIcon.png";
+import DockerIcon from "../assets/icons/dockerIcon.png";
 import PostmanIcon from "../assets/icons/postmanIcon.png";
 
 
@@ -29,7 +30,6 @@ const AvatarImage = styled("img")(({ theme }) => ({
     borderRadius: "50%",
     width: 200,
     height: 200,
-    border: `4px solid ${theme.palette.background.paper}`,
     marginBottom: theme.spacing(-2),
 }));
 
@@ -68,9 +68,10 @@ const technicalSkills = [
     { name: "Java", iconPath: JavaIcon },
     { name: "JavaScript", iconPath: JavaScriptIcon },
     { name: "React", iconPath: ReactIcon },
-    { name: "Git", iconPath: GitIcon },
-    { name: "Figma", iconPath: FigmaIcon },
     { name: "Php", iconPath: PhpIcon },
+    { name: "Git", iconPath: GitIcon },
+    { name: "Docker", iconPath: DockerIcon },
+    { name: "Figma", iconPath: FigmaIcon },
     { name: "Linux", iconPath: LinuxIcon },
     { name: "Postman", iconPath: PostmanIcon }
 ];
@@ -87,7 +88,7 @@ const Home = () => {
                     <HomeContent>
                         <Zoom cascade triggerOnce damping={0.6}>
                             <Typography variant="h4" gutterBottom sx={{fontFamily: 'CentraRegular'}}>
-                                Hello, my name is
+                                Hello my name is
                             </Typography>
                             <Typography variant="h2" gutterBottom sx={{fontFamily: 'CentraExtraBold', color: '#8F7F92'}}>
                                 Axel Frache
