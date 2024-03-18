@@ -80,8 +80,8 @@ const Home = () => {
     return (
         <div>
             <Header />
-            <Container maxWidth="sm">
-                <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" minHeight="90vh">
+            <Container maxWidth="sm" sx={{ mt: 1.5 }}>
+                <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" minHeight="55vh">
                     <Fade triggerOnce duration={700}>
                         <AvatarImage src={avatarImage} alt="Avatar" />
                     </Fade>
@@ -96,7 +96,7 @@ const Home = () => {
                             <Typography variant="h6" sx={{fontFamily: 'CentraLight'}}>
                                 Welcome to my portfolio! I'm a CS student deeply passionate about development and technology 👨‍💻
                             </Typography>
-                            <Button variant="contained" sx={{ mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' } }}>
+                            <Button variant="contained" sx={{ mt: 1, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' } }}>
                                 <Link to="recent-projects" smooth={true} duration={500} spy={true} exact="true" offset={-70}>
                                     Explore my Projects
                                 </Link>
