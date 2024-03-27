@@ -27,3 +27,15 @@
     font-style: normal;
     src: url('./CentraNo2-Light.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'RobotoMedium';
+    font-style: normal;
+    src: url('./Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    font-style: normal;
+    src: url('./Roboto-Regular.ttf') format('truetype');
+}

@@ -48,7 +48,7 @@ const Header = () => {
                     </IconButton>
                     <Box sx={{ display: { xs: 'none', sm: 'block'} }}>
                         {navLinks.map(({ title, path }) => (
-                            <Button sx={{fontFamily:'CentraRegular'}} key={title} color="inherit" component={RouterLink} to={path}>
+                            <Button sx={{fontFamily:'RobotoRegular'}} key={title} color="inherit" component={RouterLink} to={path}>
                                 {title}
                             </Button>
                         ))}

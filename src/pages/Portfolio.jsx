@@ -118,18 +118,15 @@ const Portfolio = () => {
             </Container>
 
             <Box display="flex" justifyContent="center" alignItems="center" gap={2}>
-                {/* Bouton pour ouvrir le CV PDF dans un nouvel onglet */}
-                <Button variant="contained" component="a" href={`${process.env.PUBLIC_URL}/assets/CV-Axel-Frache.pdf`} sx={{ mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' }}} target="_blank" rel="noopener noreferrer">
+                <Button variant="contained" component="a" href={`${process.env.PUBLIC_URL}/assets/CV-Axel-Frache.pdf`} sx={{fontFamily: 'RobotoMedium', mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' }}} target="_blank" rel="noopener noreferrer">
                     View resume
                 </Button>
 
-                {/* Bouton pour rediriger vers LinkedIn */}
-                <Button variant="contained" component="a" href="https://www.linkedin.com/in/axel-frache" sx={{ mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' }}} target="_blank" rel="noopener noreferrer" startIcon={<LinkedInIcon />}>
+                <Button variant="contained" component="a" href="https://www.linkedin.com/in/axel-frache" sx={{fontFamily: 'RobotoMedium', mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' }}} target="_blank" rel="noopener noreferrer" startIcon={<LinkedInIcon />}>
                     LinkedIn
                 </Button>
 
-                {/* Bouton pour rediriger vers GitHub */}
-                <Button variant="contained" component="a" href="https://github.com/axelfrache" sx={{ mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' }}} target="_blank" rel="noopener noreferrer" startIcon={<GitHubIcon />}>
+                <Button variant="contained" component="a" href="https://github.com/axelfrache" sx={{fontFamily: 'RobotoMedium', mt: 2, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' }}} target="_blank" rel="noopener noreferrer" startIcon={<GitHubIcon />}>
                     GitHub
                 </Button>
             </Box>

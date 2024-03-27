@@ -19,7 +19,7 @@ const projects = [
     },
     {
         title: "Pokemon Finder",
-        description: "Pokemon Finder is a React-based application hosted on GitHub, serves as an interactive Pokédex, allowing users to explore and discover detailed information about Pokémon through the extensive PokéAPI.",
+        description: "Pokemon Finder is a React-based application hosted on GitHub, serves as an interactive Pokedex, allowing users to explore and discover detailed information about Pokemon through the extensive PokeAPI.",
         imageUrl: PokemonFinder,
         projectUrl: "https://github.com/axelfrache/PokemonFinder",
         technologies: ["React"]

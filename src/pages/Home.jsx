@@ -93,7 +93,9 @@ const Home = () => {
                             <Typography variant="h6" sx={{fontFamily: 'CentraLight'}}>
                                 Welcome to my portfolio! I'm a CS student deeply passionate about development and technology 👨‍💻
                             </Typography>
-                            <Button variant="contained" sx={{ mt: 4, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' } }}>
+                        <Button to="recent-projects" smooth={true} duration={500} spy={true} exact="true" offset={-70}
+                            variant="outlined"
+                            sx={{fontFamily: 'RobotoMedium', mt: 4, color: '#72677E', borderColor: '#72677E' ,':hover': {color: '#8F7F92', borderColor: '#8F7F92', backgroundColor: 'rgba(255, 255, 255, 0.2)'}}}>
                                 <Link to="recent-projects" smooth={true} duration={500} spy={true} exact="true" offset={-70}>
                                     Explore my Projects
                                 </Link>
@@ -105,7 +107,7 @@ const Home = () => {
                 </Box>
             </Container>
 
-            <Container sx={{ py: 8, mt: 10, alignItems: 'center' }} maxWidth="md" id="recent-projects">
+            <Container sx={{ py: 8, mt: 15, alignItems: 'center' }} maxWidth="md" id="recent-projects">
                 <Fade triggerOnce>
                     <Typography variant="h4" component="h2" gutterBottom sx={{ color: "#5E6378", fontWeight: 'bold', textAlign: 'center', fontFamily: 'CentraRegular'}}>
                         Recent projects
@@ -121,14 +123,14 @@ const Home = () => {
                         ))}
                     </Grid>
                     <Box display="flex" justifyContent="center" mt={4}>
-                        <Button variant="contained" component={RouterLink} to="/projects" sx={{backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' } }}>
+                        <Button variant="contained" component={RouterLink} to="/projects" sx={{fontFamily: 'RobotoMedium', backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' } }}>
                             Show more
                         </Button>
                     </Box>
                 </Fade>
             </Container>
 
-            <Container sx={{ py: 8 }} maxWidth="md">
+            <Container sx={{ py: 8, mt:4 }} maxWidth="md">
                 <Fade triggerOnce>
                     <Typography variant="h4" component="h2" gutterBottom sx={{ color: "#5E6378", fontWeight: 'bold', textAlign: 'center', fontFamily: 'CentraRegular'}}>
                         Skills

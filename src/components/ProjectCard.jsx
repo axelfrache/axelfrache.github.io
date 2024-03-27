@@ -28,7 +28,7 @@ const ProjectCard = ({ project }) => {
                 </Button>
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px' }}>
                     {technologies.map((tech) => (
-                        <Chip key={tech} label={tech} size="small" variant="outlined" sx={{ backgroundColor: '#E1C2BE', color: 'black', fontWeight: 'bold' }} />
+                        <Chip key={tech} label={tech} size="small" variant="outlined" sx={{fontFamily:'RobotoRegular', backgroundColor: '#E1C2BE', color: 'black', fontWeight: 'bold' }} />
                     ))}
                 </div>
             </CardActions>
