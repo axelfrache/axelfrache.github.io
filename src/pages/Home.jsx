@@ -82,11 +82,8 @@ const Home = () => {
             <Header />
             <Container maxWidth="sm" sx={{ position: 'relative', mt: 1.5}}>
                 <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" minHeight="80vh">
-                    <Fade triggerOnce duration={700}>
                         <AvatarImage src={avatarImage} alt="Avatar" />
-                    </Fade>
                     <HomeContent>
-                        <Zoom cascade triggerOnce damping={0.6}>
                             <Typography variant="h4" gutterBottom sx={{fontFamily: 'CentraRegular'}}>
                                 Hello my name is
                             </Typography>
@@ -101,7 +98,6 @@ const Home = () => {
                                     Explore my Projects
                                 </Link>
                             </Button>
-                        </Zoom>
                     </HomeContent>
                 </Box>
                 <Box className="scroll-down-container" sx={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>

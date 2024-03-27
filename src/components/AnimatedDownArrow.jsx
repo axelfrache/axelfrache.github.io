@@ -13,7 +13,6 @@ const AnimatedDownArrow = styled(ArrowDownwardIcon)(({ theme }) => ({
     color: '#2F4858',
     fontSize: '2.5rem',
     animation: `${bounceAnimation} 2s infinite`,
-    cursor: 'pointer',
     bottom: '80px',
     marginTop : '40px',
     [theme.breakpoints.down('sm')]: {
