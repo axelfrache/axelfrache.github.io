@@ -8,6 +8,17 @@
   pointer-events: none;
 }
 
+.scroll-down-container {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .scroll-down-container {
+    bottom: -35px;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

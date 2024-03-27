@@ -81,7 +81,7 @@ const Home = () => {
         <div>
             <Header />
             <Container maxWidth="sm" sx={{ position: 'relative', mt: 1.5}}>
-                <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" minHeight="90vh">
+                <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" minHeight="80vh">
                     <Fade triggerOnce duration={700}>
                         <AvatarImage src={avatarImage} alt="Avatar" />
                     </Fade>
@@ -104,8 +104,8 @@ const Home = () => {
                         </Zoom>
                     </HomeContent>
                 </Box>
-                <Box sx={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)'}}>
-                <ScrollDownArrow />
+                <Box className="scroll-down-container" sx={{position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
+                    <ScrollDownArrow />
                 </Box>
             </Container>
 
