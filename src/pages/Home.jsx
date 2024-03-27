@@ -80,8 +80,8 @@ const Home = () => {
     return (
         <div>
             <Header />
-            <Container maxWidth="sm" sx={{ mt: 1.5 }}>
-                <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" minHeight="55vh">
+            <Container maxWidth="sm" sx={{ position: 'relative', mt: 1.5}}>
+                <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" minHeight="90vh">
                     <Fade triggerOnce duration={700}>
                         <AvatarImage src={avatarImage} alt="Avatar" />
                     </Fade>
@@ -96,19 +96,21 @@ const Home = () => {
                             <Typography variant="h6" sx={{fontFamily: 'CentraLight'}}>
                                 Welcome to my portfolio! I'm a CS student deeply passionate about development and technology 👨‍💻
                             </Typography>
-                            <Button variant="contained" sx={{ mt: 1, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' } }}>
+                            <Button variant="contained" sx={{ mt: 4, backgroundColor: '#8F7F92', '&:hover': { backgroundColor: '#72677E' } }}>
                                 <Link to="recent-projects" smooth={true} duration={500} spy={true} exact="true" offset={-70}>
                                     Explore my Projects
                                 </Link>
                             </Button>
                         </Zoom>
                     </HomeContent>
-                    <ScrollDownArrow />
+                </Box>
+                <Box sx={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)'}}>
+                <ScrollDownArrow />
                 </Box>
             </Container>
 
             <Container sx={{ py: 8, mt: 10, alignItems: 'center' }} maxWidth="md" id="recent-projects">
-                <Fade>
+                <Fade triggerOnce>
                     <Typography variant="h4" component="h2" gutterBottom sx={{ color: "#5E6378", fontWeight: 'bold', textAlign: 'center', fontFamily: 'CentraRegular'}}>
                         Recent projects
                     </Typography>
@@ -131,7 +133,7 @@ const Home = () => {
             </Container>
 
             <Container sx={{ py: 8 }} maxWidth="md">
-                <Fade>
+                <Fade triggerOnce>
                     <Typography variant="h4" component="h2" gutterBottom sx={{ color: "#5E6378", fontWeight: 'bold', textAlign: 'center', fontFamily: 'CentraRegular'}}>
                         Skills
                     </Typography>
